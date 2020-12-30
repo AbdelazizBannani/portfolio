@@ -1,23 +1,23 @@
 
-$(window).on("load", function() 
-{
-$(".loader .inner").fadeOut(500, function()
-    {
-    $(".loader").fadeOut(750);
-    });
+// $(window).on("load", function() 
+// {
+// $(".loader .inner").fadeOut(500, function()
+//     {
+//     $(".loader").fadeOut(750);
+//     });
 
-    $(".items").isotope(
-        {
-        filter: '*',
-        layoutMode: 'fitRows',
-        animationOptions:
-            {
-            duration: 1500,
-            easing: 'linear',
-            queue: false
-            }
-        });
-});
+//     $(".items").isotope(
+//         {
+//         filter: '*',
+//         layoutMode: 'fitRows',
+//         animationOptions:
+//             {
+//             duration: 1500,
+//             easing: 'linear',
+//             queue: false
+//             }
+//         });
+// });
 
 
 
@@ -74,12 +74,12 @@ var skillsTopOffset = $(".skillsSection").offset().top;
 var statsTopOffset = $(".statsSection").offset().top;
 
 $(window).scroll(function() {
+
     if(window.pageYOffset > skillsTopOffset - $(window).height() + 200)
         {
-        $('.chart').easyPieChart(
-            {
+        $('.chart').easyPieChart({
             easing: 'easeInOut',
-            barColor: '#fff',
+            barColor: '#fed330',
             trackColor: false,
             scaleColor: false,
             lineWidth: 4,
@@ -121,7 +121,7 @@ $(window).scroll(function() {
 });
 
 
-
+$('[data-fancybox-trigger="portfolioImg"]').fancybox();
 
 
 

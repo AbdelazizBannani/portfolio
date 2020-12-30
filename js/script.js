@@ -124,7 +124,33 @@ $(window).scroll(function() {
 $('[data-fancybox-trigger="portfolioImg"]').fancybox();
 
 
+$(".items").isotope({
+    filter:'*',
+    animationOptions:{
+        duration: 1500,
+        easing: 'linear',
+        queue: false 
+    }
+});
 
+$("#filters a").click(function() {
+    $("#filters .current").removeClass("current");
+    $(this).addClass("current");/*'this' reffers to the object on whch the event was calles on  */
+
+    var selector = $(this).attr("data-filter");
+
+    $(".items").isotope(
+        {
+        filter: selector,
+        animationOptions:
+            {
+            duration: 1500,
+            easing: 'linear',
+            queue: false
+            }
+        });
+    return false;
+});
 
 
 
